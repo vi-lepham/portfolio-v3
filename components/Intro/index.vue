@@ -53,7 +53,7 @@
       .paragraph-r {
         margin-bottom: 2.083vw;
         &:last-of-type {
-            margin-bottom: 0;
+          margin-bottom: 0;
         }
       }
     }
@@ -61,6 +61,23 @@
   .paragraph-r {
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .s-intro {
+    padding-bottom: 16.66vw;
+    .intro-container {
+      display: block;
+    }
+    .intro-column {
+      &:first-child {
+        margin: 0;
+        flex-basis: unset;
+      }
+    }
+    .paragraph-r:last-of-type {
+      margin-bottom: 8vw;
     }
   }
 }

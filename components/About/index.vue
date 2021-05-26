@@ -10,7 +10,7 @@
       </div>
       <div class="about-badge"></div>
       <div class="about-heading">
-        <h2 class="heading-xl">Folio- 03</h2>
+        <h2 class="heading-xl">Portfolio- 03</h2>
       </div>
       <div class="about-text">
         <div class="text-column">
@@ -104,13 +104,14 @@
     right: 0;
     bottom: 4.16vw;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 8.33vw;
     .text-column {
       display: flex;
-      justify-content: flex-end;
       align-items: center;
       &:first-child {
+        width: 16.66vw;
+        margin: 0 16.66vw 0 16.66vw;
         animation: loading 1s linear infinite;
       }
       .paragraph-r {
@@ -126,6 +127,46 @@
 @keyframes loading {
   to {
     opacity: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .s-about {
+    height: 100vw;
+    .about-head {
+      display: none;
+    }
+    .about-badge {
+      top: 8.33vw;
+      left: 8.33vw;
+      width: 25vw;
+      height: 25vw;
+      background-size: 10vw;
+    }
+    .about-heading {
+      top: 75vw;
+      bottom: unset;
+    }
+    .about-text {
+      left: unset;
+      right: unset;
+      bottom: unset;
+      position: relative;
+      text-align: right;
+      .text-column {
+        &:first-child {
+          display: none;
+        }
+        &:nth-child(2) {
+          top: 8.33vw;
+          right: 8.33vw;
+          position: absolute;
+        }
+        li {
+          float: unset;
+          margin-right: unset;
+        }
+      }
+    }
   }
 }
 </style>

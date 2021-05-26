@@ -1,9 +1,9 @@
 <template>
-  <div class="s-project">
+  <section class="s-project">
     <div class="project-container" :data-color="dataColor">
       <div class="project-head">
-        <p class="paragraph-m">{{ collection }}</p>
-        <p class="paragraph-m">§ {{ id }}</p>
+        <p class="paragraph-r">{{ collection }}</p>
+        <p class="paragraph-r">§ {{ id }}</p>
         <h2 class="heading-xl">{{ title }}</h2>
       </div>
       <div class="project-wrap">
@@ -15,19 +15,16 @@
             <p class="paragraph-r">
               {{ stack }}
             </p>
-            <ul class="paragraph-r">
-              <li v-for="(link, id) in links" :key="id" class="link-r">
-                <a :href="link.url" target="_blank" rel="noopener">
-                  <github-icon v-if="link.type === 'github'"></github-icon>
-                  <p v-if="link.type === 'storybook'" class="parahraph-r">
-                    or View demo →
-                  </p>
-                  <p v-if="link.type === 'site'" class="parahraph-r">
-                    or View site →
-                  </p>
-                </a>
-              </li>
-            </ul>
+            <a
+              v-for="(link, id) in links"
+              :key="id"
+              :href="link.url"
+              target="_blank"
+              rel="noopener"
+              class="button-r"
+            >
+              {{ link.cta }}
+            </a>
           </div>
           <div class="content-date">
             <h3 class="heading-xl">{{ date }}</h3>
@@ -35,14 +32,14 @@
         </div>
         <div class="project-image">
           <img
-            :src="img"
+            src="../../assets/img/bella.png"
             alt="Vi Le Pham, Front-end Developer"
             class="image-src"
           />
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -83,6 +80,11 @@ export default {
       required: false,
       default: () => []
     },
+    img: {
+      type: String,
+      required: false,
+      default: ""
+    },
     date: {
       type: String,
       required: false,
@@ -95,7 +97,7 @@ export default {
 <style lang="scss">
 .s-project {
   position: relative;
-  height: auto;
+  height: fit-content;
   padding: 8.33vw;
   overflow: hidden;
   .project-head {
@@ -104,12 +106,23 @@ export default {
     flex-wrap: wrap;
     margin-bottom: 8.33vw;
     z-index: 1;
-    .paragraph-m {
+    .paragraph-r {
       position: relative;
       flex-basis: 50%;
       margin-bottom: 4.16vw;
       &:first-child {
         padding-left: 16.66vw;
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 16.66vw;
+          height: 1px;
+          background-color: var(--text-color);
+          top: 50%;
+          transform: translateY(-50%);
+          right: -10%;
+        }
       }
       &:nth-child(2) {
         padding-left: 8.33vw;
@@ -121,31 +134,31 @@ export default {
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    &.reversed {
+      .project-content {
+        order: 2;
+      }
+      .project-image {
+        order: 1;
+      }
+    }
   }
   .project-content {
     position: relative;
     width: 33.33vw;
-    height: 79.55vw;
+    height: 69.55vw;
   }
   .content-info {
-    padding: 16.66vw 8.33vw 0;
+    padding: 8.33vw 8.33vw 0;
     .paragraph-m {
       margin-bottom: 2.8vw;
     }
-    ul.paragraph-r {
-      position: relative;
-      display: block;
+    .paragraph-r {
+      margin-bottom: 0;
+    }
+    .button-r {
+      display: inline-block;
       margin-top: 2.8vw;
-      padding-left: 8.65vw;
-      svg {
-        width: 20px;
-        height: 20px;
-        opacity: 0.5;
-        &:hover {
-          opacity: 1;
-          transition: 0.5s var(--easing);
-        }
-      }
     }
   }
   .content-date {
@@ -160,7 +173,7 @@ export default {
   .project-image {
     position: relative;
     width: 50vw;
-    height: 79.55vw;
+    height: 69.55vw;
     overflow: hidden;
     will-change: transform;
     .image-src {
@@ -172,6 +185,52 @@ export default {
       object-fit: cover;
       position: absolute;
       will-change: transform;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .s-project {
+    padding: 16.66vw 8.33vw;
+    .project-head {
+      .paragraph-r {
+        &:first-child {
+          order: 2;
+          flex-basis: 85%;
+          padding-left: unset;
+        }
+        &:nth-child(2) {
+          flex-basis: 15%;
+          padding-left: unset;
+        }
+      }
+    }
+    .project-content {
+      order: 2;
+      width: unset;
+      height: unset;
+    }
+    .content-info {
+      padding: 0;
+      margin: 8.33vw 0 0;
+      .paragraph-m {
+        margin-bottom: 4.16vw;
+      }
+      .button-r {
+        margin-top: 8.33vw;
+      }
+    }
+    .content-date {
+      left: 0;
+      transform: rotate(0deg);
+    }
+    .project-image {
+      order: 1;
+      width: 100%;
+      height: 120vw;
+      .image-src {
+        top: -25%;
+        height: 105%;
+      }
     }
   }
 }
