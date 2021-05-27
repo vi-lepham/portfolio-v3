@@ -81,7 +81,6 @@
     }
     .heading-row {
       top: 0;
-      left: 0;
       width: 9vw;
       text-align: center;
       position: absolute;

@@ -15,15 +15,8 @@
             <p class="paragraph-r">
               {{ stack }}
             </p>
-            <a
-              v-for="(link, id) in links"
-              :key="id"
-              :href="link.url"
-              target="_blank"
-              rel="noopener"
-              class="button-r"
-            >
-              {{ link.cta }}
+            <a :href="siteUrl" target="_blank" rel="noopener" class="button-r">
+              View site &#160; <span>→</span>
             </a>
           </div>
           <div class="content-date">
@@ -32,7 +25,7 @@
         </div>
         <div class="project-image">
           <img
-            src="../../assets/img/bella.png"
+            :src="img"
             alt="Vi Le Pham, Front-end Developer"
             class="image-src"
           />
@@ -75,10 +68,10 @@ export default {
       required: false,
       default: ""
     },
-    links: {
-      type: Array,
+    siteUrl: {
+      type: String,
       required: false,
-      default: () => []
+      default: ""
     },
     img: {
       type: String,
@@ -118,7 +111,7 @@ export default {
           display: block;
           width: 16.66vw;
           height: 1px;
-          background-color: var(--text-color);
+          background-color: #171717;
           top: 50%;
           transform: translateY(-50%);
           right: -10%;
@@ -157,8 +150,20 @@ export default {
       margin-bottom: 0;
     }
     .button-r {
-      display: inline-block;
+      display: block;
       margin-top: 2.8vw;
+      &:before {
+        left: 0;
+        top: 50%;
+        width: 8vw;
+        height: 1px;
+        content: "";
+        background: #171717;
+        position: absolute;
+      }
+      span {
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
     }
   }
   .content-date {
@@ -178,7 +183,6 @@ export default {
     will-change: transform;
     .image-src {
       left: 0;
-      top: 0;
       top: -15%;
       width: 100%;
       height: 100%;
@@ -216,7 +220,10 @@ export default {
         margin-bottom: 4.16vw;
       }
       .button-r {
-        margin-top: 8.33vw;
+        margin: 8.33vw 0;
+        &:before {
+          width: 16.66vw;
+        }
       }
     }
     .content-date {
@@ -232,6 +239,19 @@ export default {
         height: 105%;
       }
     }
+  }
+}
+.button-r:hover {
+  opacity: 0.5;
+  span {
+    display: inline-block;
+    animation: arrowAnim 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  }
+}
+
+@keyframes arrowAnim {
+  100% {
+    transform: translateX(10px);
   }
 }
 </style>

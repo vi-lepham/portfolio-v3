@@ -2,22 +2,23 @@
   <div class="container">
     <loader></loader>
     <div class="a-background"></div>
-    <main class="a-main">
+    <main class="a-main" data-scroll-container>
       <article class="a-article">
-        <about></about>
-        <intro></intro>
+        <about data-scroll-section></about>
+        <intro data-scroll-section></intro>
         <project
           v-for="(project, id) in projects"
           :key="id"
           :dataColor="project.dataColor"
           :collection="project.collection"
-          :id="project.id"
+          :id="id + 1"
           :title="project.title"
           :description="project.description"
           :stack="project.stack"
-          :links="project.links"
-          :img="project.img"
+          :siteUrl="project.siteUrl"
+          :img="require(`../assets/img/${project.img}`)"
           :date="project.date"
+          data-scroll-section
         ></project>
       </article>
     </main>
@@ -41,47 +42,49 @@ export default {
     return {
       projects: [
         {
-          dataColor: "f3f3f1",
+          dataColor: "#c2cac3",
           collection: "Animation Experiments",
-          id: 1,
           title: "Bella",
           description:
             "A landing page project inspired by the amazing https://stockdutchdesign.com/ by Exo Ape.",
           stack: "Nuxtjs, GSAP, Barbajs",
-          links: [
-            {
-              cta: "Github",
-              url: "https://github.com/vi-lepham/bella"
-            },
-            {
-              cta: "・ View demo →",
-              url: ""
-            }
-          ],
-          img: "'../assets/img/bella.png'",
+          siteUrl: "",
+          img: "bella.png",
           date: "04.21"
         },
         {
-          dataColor: "f3f3f1",
+          dataColor: "#f3f3f1",
           collection: "Animation Experiments",
-          id: 1,
-          title: "Bella",
+          title: "3D Room Exhibition",
           description:
-            "A landing page project inspired by the amazing https://stockdutchdesign.com/ by Exo Ape.",
-          stack: "Nuxtjs, GSAP, Barbajs",
-          links: [
-            {
-              cta: "Github",
-              url: "https://github.com/vi-lepham/bella"
-            },
-            {
-              cta: "・ View demo →",
-              url: ""
-            }
-          ],
-          img: "'../assets/img/bella.png'",
-          date: "03.21"
-        }
+            "A highly experimental 3D room layout for a gallery that aims to show exhibition details in an interesting way.",
+          stack: "Nuxtjs, anime.js",
+          siteUrl: "",
+          img: "exhibition.png",
+          date: "01.21"
+        },
+        {
+          dataColor: "#f3f3f1",
+          collection: "Side Projects - Ecommerce",
+          title: "Skivi",
+          description:
+            "A highly experimental 3D room layout for a gallery that aims to show exhibition details in an interesting way.",
+          stack: "React, Redux, Firebase",
+          siteUrl: "https://skivi-clothing.netlify.app/",
+          img: "skivi.jpeg",
+          date: "05.20"
+        },
+        {
+          dataColor: "#f3f3f1",
+          collection: "Side Projects - Web App",
+          title: "Pines&Butter",
+          description:
+            'A recipe finder app that answers to the question: "Too lazy to shop. What can I cook from my leftovers?"',
+          stack: "React, Hooks, Spoonacular API",
+          siteUrl: "",
+          img: "pinesnbutter.png",
+          date: "07.20"
+        },
       ]
     };
   },
@@ -101,5 +104,6 @@ export default {
   height: auto;
   z-index: 1;
   margin: auto;
+  padding-bottom: 50vw;
 }
 </style>

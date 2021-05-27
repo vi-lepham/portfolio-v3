@@ -35,7 +35,7 @@
               >
             </li>
             <li class="link-r">
-              <a href="#contact">Direct</a>
+              <a href="#contact">Email</a>
             </li>
           </ul>
         </div>
@@ -99,16 +99,12 @@
     }
   }
   .about-text {
-    position: absolute;
-    left: 0;
+    left: 8.33vw;
     right: 0;
     bottom: 4.16vw;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 8.33vw;
+    position: absolute;
     .text-column {
-      display: flex;
-      align-items: center;
+      float: left;
       &:first-child {
         width: 16.66vw;
         margin: 0 16.66vw 0 16.66vw;
@@ -118,6 +114,7 @@
         margin: 0;
       }
       li {
+        float: left;
         position: relative;
         margin-right: 1.4vw;
       }

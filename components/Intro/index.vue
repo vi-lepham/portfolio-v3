@@ -3,12 +3,10 @@
     <div class="intro-container" data-color="#f3f2f7">
       <div class="intro-column">
         <p class="paragraph-m">
-          Front End Engineer and Designer in Tokyo. Monotas by day, creative
-          developer by night - turning designs into beautiful digital
-          experiences.
+          Front End Engineer and Designer from Hanoi, based in Tokyo.  Monotas by day, freelancer by night - turning designs into beautiful digital experiences.
         </p>
         <p class="paragraph-r">
-          Email
+          <span class="font-italic">Email</span>
           <br />
           pham.levi.9@gmail.com
         </p>
@@ -20,12 +18,12 @@
           these seemingly far-apart roles.
         </p>
         <p class="paragraph-r">
-          Tools
+          <span class="font-italic">Tools</span>
           <br />
           Figma, Adobe Photoshop, Adobe Illustrator
         </p>
         <p class="paragraph-r">
-          Tech
+          <span class="font-italic">Tech</span>
           <br />
           Nuxt.js, React, Redux, GSAP, TailwindCSS, Storybook
         </p>
@@ -51,7 +49,6 @@
     }
     &:nth-child(2) {
       .paragraph-r {
-        margin-bottom: 2.083vw;
         &:last-of-type {
           margin-bottom: 0;
         }
@@ -63,6 +60,10 @@
       margin-bottom: 0;
     }
   }
+}
+
+.font-italic {
+  font-style: italic;
 }
 @media only screen and (max-width: 768px) {
   .s-intro {
