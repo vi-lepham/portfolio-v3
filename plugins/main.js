@@ -56,22 +56,20 @@ window.addEventListener("load", () => {
 
 // Inner images parallax
 
-const imageContainers = selectAll(".project-image")
+const imageContainers = selectAll(".project-image");
 
 imageContainers.forEach(container => {
+  const image = container.querySelector(".image-src");
 
-    const image = container.querySelector(".image-src")
-
-    gsap.to(image, {
-        top: "5%",
-        ease: Power4.ease,
-        scrollTrigger: {
-            trigger: container,
-            scrub: true,
-        }
-    })
-})
-
+  gsap.to(image, {
+    top: "7%",
+    ease: Power4.ease,
+    scrollTrigger: {
+      trigger: container,
+      scrub: true
+    }
+  });
+});
 
 // Change background color on each project
 
@@ -90,3 +88,4 @@ projects.forEach(project => {
         }
     })
 })
+

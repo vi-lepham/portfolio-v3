@@ -81,7 +81,7 @@ export default {
           description:
             'A recipe finder app that answers to the question: "Too lazy to shop. What can I cook from my leftovers?"',
           stack: "React, Hooks, Spoonacular API",
-          siteUrl: "",
+          siteUrl: "https://pinesandbutter.netlify.app",
           img: "pinesnbutter.png",
           date: "07.20"
         },
