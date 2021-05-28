@@ -79,13 +79,24 @@ projects.forEach(project => {
 
     let newColor = project.getAttribute("data-color")
 
-    gsap.to(".a-main", {
-        backgroundColor: newColor,
-        ease: Power4.easeInOut,
-        scrollTrigger: {
-            trigger: project,
-            scrub: true,
-        }
+    ScrollTrigger.create({
+      trigger: project,
+      start: "top 60%",
+      end: "bottom 0%",
+
+      onEnter: () => {
+        gsap.to("body", {
+          duration: 1,
+          backgroundColor: newColor
+        })
+      },
+
+      onLeaveBack: () => {
+        gsap.to("body", {
+          duration: 1,
+          backgroundColor: "#f3f3f1"
+        })
+      }
     })
 })
 

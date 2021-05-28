@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <loader></loader>
-    <div class="a-background"></div>
     <main class="a-main" data-scroll-container>
       <article class="a-article">
         <about data-scroll-section></about>
@@ -20,6 +19,8 @@
           :date="project.date"
           data-scroll-section
         ></project>
+        <other-projects></other-projects>
+        <app-footer></app-footer>
       </article>
     </main>
   </div>
@@ -30,13 +31,17 @@ import Loader from "../components/Loader";
 import About from "../components/About";
 import Intro from "../components/Intro";
 import Project from "../components/Project";
+import OtherProjects from "../components/OtherProjects";
+import AppFooter from "../components/AppFooter"
 
 export default {
   components: {
     Loader,
     About,
     Intro,
-    Project
+    Project,
+    OtherProjects,
+    AppFooter
   },
   data() {
     return {
@@ -64,7 +69,7 @@ export default {
           date: "01.21"
         },
         {
-          dataColor: "#f3f3f1",
+          dataColor: "rgb(255, 227, 137)",
           collection: "Side Projects - Ecommerce",
           title: "Skivi",
           description:
@@ -75,7 +80,7 @@ export default {
           date: "05.20"
         },
         {
-          dataColor: "#f3f3f1",
+          dataColor: "rgb(163, 185, 180)",
           collection: "Side Projects - Web App",
           title: "Pines&Butter",
           description:
@@ -104,6 +109,5 @@ export default {
   height: auto;
   z-index: 1;
   margin: auto;
-  padding-bottom: 50vw;
 }
 </style>

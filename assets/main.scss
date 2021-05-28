@@ -70,6 +70,13 @@ section {
   padding-left: 8.65vw;
 }
 
+.list-r {
+  opacity: 0.7;
+  font-size: 0.833vw;
+  font-weight: 400;
+  line-height: 1.7vw;
+}
+
 .s-project .project-head .heading-xl {
   flex-basis: 100%;
   position: relative;
@@ -103,7 +110,7 @@ img {
     line-height: 5vw;
     margin-bottom: 8.33vw;
   }
-  .s-project .project-head .heading-xl, {
+  .s-project .project-head .heading-xl {
     order: 3;
     margin-top: 8.33vw;
   }
@@ -111,5 +118,9 @@ img {
     font-size: 3.5vw;
     line-height: 5vw;
     padding-left: 18.33vw;
+  }
+  .list-r {
+    font-size: 3vw;
+    line-height: 4vw;
   }
 }
