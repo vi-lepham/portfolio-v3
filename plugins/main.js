@@ -7,7 +7,21 @@ gsap.registerPlugin(ScrollTrigger);
 const select = e => document.querySelector(e);
 const selectAll = e => document.querySelectorAll(e);
 
+
+// Init locomotive scroll
+function initSmoothScroll() {
+
+  const lscroll = new LocomotiveScroll({
+    el: select("[data-scroll-container]"),
+    smooth: true,
+    getDirection: true
+  });
+
+}
+
+// Init loading animations
 function initLoadingAnim() {
+
   // select components
 
   const loader = select(".a-loader");
@@ -44,44 +58,38 @@ function initLoadingAnim() {
   });
 }
 
-window.addEventListener("load", () => {
-  initLoadingAnim();
-
-  const lscroll = new LocomotiveScroll({
-    el: select("[data-scroll-container]"),
-    smooth: true,
-    getDirection: true
-  });
-});
-
 // Inner images parallax
+function initParallax() {
 
-const imageContainers = selectAll(".project-image");
+  const imageContainers = selectAll(".project-image");
 
-imageContainers.forEach(container => {
-  const image = container.querySelector(".image-src");
+  imageContainers.forEach(container => {
+    const image = container.querySelector(".image-src");
 
-  gsap.to(image, {
-    top: "7%",
-    ease: Power4.ease,
-    scrollTrigger: {
-      trigger: container,
-      scrub: true
-    }
+    gsap.to(image, {
+      top: "7%",
+      ease: Power4.ease,
+      scrollTrigger: {
+        trigger: container,
+        scrub: true
+      }
+    });
   });
-});
+
+}
 
 // Change background color on each project
+function initBackgroundChange() {
 
-const projects = selectAll(".s-project .project-container")
+  const projects = selectAll(".s-project .project-container")
 
-projects.forEach(project => {
+  projects.forEach(project => {
 
     let newColor = project.getAttribute("data-color")
 
     ScrollTrigger.create({
       trigger: project,
-      start: "top 60%",
+      start: "top bottom",
       end: "bottom 0%",
 
       onEnter: () => {
@@ -98,5 +106,21 @@ projects.forEach(project => {
         })
       }
     })
-})
+  })
 
+}
+
+function init() {
+
+  initSmoothScroll();
+  initLoadingAnim();
+  initParallax();
+  initBackgroundChange();
+
+}
+
+window.addEventListener("load", () => {
+
+  init();
+
+})

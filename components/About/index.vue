@@ -8,7 +8,9 @@
           Designer ・　Front End Engineer
         </h1>
       </div>
-      <div class="about-badge"></div>
+      <div class="about-badge">
+        <div class="badge-text"></div>
+      </div>
       <div class="about-heading">
         <h2 class="heading-xl">Portfolio- 03</h2>
       </div>
@@ -73,19 +75,22 @@
     width: 12.5vw;
     height: 12.5vw;
     position: absolute;
-    background-size: 3.81vw;
+    background-size: 3.5vw;
     background-repeat: no-repeat;
     background-position: 50%;
+    background-image: url("../../assets/img/lv-logo.svg");
     .badge-text {
-      top: 12%;
-      left: 12%;
-      right: 12%;
-      bottom: 12%;
+      top: 8%;
+      left: 8%;
+      right: 8%;
+      bottom: 8%;
       position: absolute;
       will-change: transform;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 50%;
+      background-image: url("../../assets/img/circular-badge.svg");
+      animation: rotate 20s linear infinite;
     }
   }
   .about-heading {
@@ -126,6 +131,11 @@
     opacity: 0;
   }
 }
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media only screen and (max-width: 768px) {
   .s-about {
     height: 100vw;
@@ -135,9 +145,15 @@
     .about-badge {
       top: 8.33vw;
       left: 8.33vw;
-      width: 25vw;
-      height: 25vw;
-      background-size: 10vw;
+      width: 30vw;
+      height: 30vw;
+      background-size: 6.66vw;
+      .badge-text {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
     }
     .about-heading {
       top: 75vw;
