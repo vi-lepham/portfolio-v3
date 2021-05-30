@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "portfolio-v3",
+    title: "Pham Le Vi - Portfolio v3",
     htmlAttrs: {
       lang: "en"
     },
