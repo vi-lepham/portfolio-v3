@@ -65,7 +65,7 @@ export default {
             "A highly experimental 3D room layout for a gallery that aims to show exhibition details in an interesting way.",
           stack: "Nuxtjs, anime.js",
           siteUrl: "",
-          img: "exhibition.png",
+          img: "mirai.png",
           date: "01.21"
         },
         {
@@ -73,7 +73,7 @@ export default {
           collection: "Side Projects - Ecommerce",
           title: "Skivi",
           description:
-            "A highly experimental 3D room layout for a gallery that aims to show exhibition details in an interesting way.",
+            "A ecommerce app built with React and Firebase database.",
           stack: "React, Redux, Firebase",
           siteUrl: "https://skivi-clothing.netlify.app/",
           img: "skivi.jpeg",
