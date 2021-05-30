@@ -51,9 +51,9 @@ export default {
           collection: "Animation Experiments",
           title: "Bella",
           description:
-            "A landing page project inspired by the amazing https://stockdutchdesign.com/ by Exo Ape.",
+            "A landing page project inspired by the amazing https://stockdutchdesign.com/ website",
           stack: "Nuxtjs, GSAP, Barbajs",
-          siteUrl: "",
+          siteUrl: "https://bella-bella.netlify.app",
           img: "bella.png",
           date: "04.21"
         },
@@ -64,7 +64,7 @@ export default {
           description:
             "A highly experimental 3D room layout for a gallery that aims to show exhibition details in an interesting way.",
           stack: "Nuxtjs, anime.js",
-          siteUrl: "",
+          siteUrl: "https://mirai-exhibition.netlify.app",
           img: "mirai.png",
           date: "01.21"
         },
@@ -75,7 +75,7 @@ export default {
           description:
             "A ecommerce app built with React and Firebase database.",
           stack: "React, Redux, Firebase",
-          siteUrl: "https://skivi-clothing.netlify.app/",
+          siteUrl: "https://shop-skivi.netlify.app",
           img: "skivi.jpeg",
           date: "05.20"
         },
