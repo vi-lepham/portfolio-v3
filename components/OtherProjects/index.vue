@@ -47,8 +47,8 @@
         </li>
         <li>&nbsp;</li>
         <li>
-          <a href="http://" target="_blank" rel="noopener" follow="nofollow">
-            TimesOfTIU [Figma, HTML, CSS, Wordpress]
+          <a href="http://timesoftiu.com" target="_blank" rel="noopener" follow="nofollow">
+            TimesOfTIU [Figma, CSS, Wordpress]
           </a>
         </li>
         <li>&nbsp;</li>

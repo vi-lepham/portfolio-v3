@@ -69,7 +69,7 @@ export default {
           date: "01.21"
         },
         {
-          dataColor: "rgb(255, 227, 137)",
+          dataColor: "rgb(255, 232, 197)",
           collection: "Side Projects - Ecommerce",
           title: "Skivi",
           description:

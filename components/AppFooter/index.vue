@@ -14,7 +14,7 @@
   padding-top: 8.33vw;
   .footer-container {
     padding: 0;
-    margin: 0 8.33vw 16.66vw;
+    margin: 0 8.33vw 4.165vw;
   }
   .paragraph-r {
     margin-bottom: 0;

@@ -59,7 +59,7 @@
     position: absolute;
     .heading-column {
       float: left;
-      height: 14.93vw;
+      height: 14.33vw;
       position: relative;
       &:nth-child(2) {
         margin-left: 2.35vw;
@@ -74,7 +74,6 @@
       &:nth-child(2),
       &:nth-child(3) {
         width: 9vw;
-        height: 14.93vw;
         overflow: hidden;
         display: inline-block;
       }

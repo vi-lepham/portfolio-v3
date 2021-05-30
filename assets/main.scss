@@ -1,3 +1,9 @@
+:root {
+
+  --bg-color: #f3f2f7;
+
+}
+
 * {
   box-sizing: border-box;
   border-collapse: inherit;
@@ -10,7 +16,9 @@
 body {
   font: 16px/1.7 "Graphit", sans-serif;
   color: #171717;
-  background: #f3f2f7;
+  will-change: background-color;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s linear;
 
   &.a-mobile {
     overflow: unset;

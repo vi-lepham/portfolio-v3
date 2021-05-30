@@ -59,62 +59,54 @@ function initLoadingAnim() {
 }
 
 // Inner images parallax
-function initParallax() {
+function initImageParallax() {
 
-  const imageContainers = selectAll(".project-image");
+  gsap.utils.toArray(".project-image").forEach(section => {
 
-  imageContainers.forEach(container => {
-    const image = container.querySelector(".image-src");
+    const image = section.querySelector(".image-src");
 
     gsap.to(image, {
       top: "7%",
       ease: Power4.ease,
       scrollTrigger: {
-        trigger: container,
+        trigger: section,
         scrub: true
       }
     });
-  });
+
+  })
 
 }
 
 // Change background color on each project
 function initBackgroundChange() {
 
-  const projects = selectAll(".s-project .project-container")
-
-  projects.forEach(project => {
+  gsap.utils.toArray(".s-project .project-container").forEach(project => {
 
     let newColor = project.getAttribute("data-color")
 
     ScrollTrigger.create({
       trigger: project,
-      start: "top bottom",
-      end: "bottom 0%",
+      start: "top 50%",
+      end: `+=${project.clientHeight}`,
 
-      onEnter: () => {
-        gsap.to("body", {
-          duration: 1,
-          backgroundColor: newColor
-        })
-      },
+      onEnter: () => updateBodyColor(newColor),
 
-      onLeaveBack: () => {
-        gsap.to("body", {
-          duration: 1,
-          backgroundColor: "#f3f3f1"
-        })
-      }
+      onEnterBack: () => updateBodyColor(newColor)
     })
   })
 
+}
+
+const updateBodyColor = color => {
+  document.documentElement.style.setProperty("--bg-color", color);
 }
 
 function init() {
 
   initSmoothScroll();
   initLoadingAnim();
-  initParallax();
+  initImageParallax();
   initBackgroundChange();
 
 }
