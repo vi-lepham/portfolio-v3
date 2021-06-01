@@ -1,6 +1,6 @@
 <template>
-  <section class="s-others">
-    <div class="other-projects-container">
+  <section class="s-client">
+    <div class="client-projects-container">
       <h2 class="heading-xl">Other Projects</h2>
       <p class="heading-r">@Monotas</p>
       <ul class="list-r">
@@ -63,7 +63,7 @@
 </template>
 
 <style lang="scss" scoped>
-.s-others {
+.s-client {
   padding: 8.33vw;
   position: relative;
   .heading-xl,
@@ -81,7 +81,7 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  .s-others {
+  .s-client {
     padding-top: 16.66vw;
     padding-bottom: 16.66vw;
     .heading-xl {

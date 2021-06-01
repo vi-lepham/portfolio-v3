@@ -19,7 +19,7 @@
           :date="project.date"
           data-scroll-section
         ></project>
-        <other-projects></other-projects>
+        <client-projects></client-projects>
         <app-footer></app-footer>
       </article>
     </main>
@@ -31,7 +31,7 @@ import Loader from "../components/Loader";
 import About from "../components/About";
 import Intro from "../components/Intro";
 import Project from "../components/Project";
-import OtherProjects from "../components/OtherProjects";
+import ClientProjects from "../components/ClientProjects";
 import AppFooter from "../components/AppFooter"
 
 export default {
@@ -40,7 +40,7 @@ export default {
     About,
     Intro,
     Project,
-    OtherProjects,
+    ClientProjects,
     AppFooter
   },
   data() {
@@ -60,12 +60,12 @@ export default {
         {
           dataColor: "#f3f3f1",
           collection: "Animation Experiments",
-          title: "3D Room Exhibition",
+          title: "Rita",
           description:
-            "A highly experimental 3D room layout for a gallery that aims to show exhibition details in an interesting way.",
-          stack: "Nuxtjs, anime.js",
-          siteUrl: "https://mirai-exhibition.netlify.app",
-          img: "mirai.png",
+            "A landing page with scrolling grids powered by Locomotive Scroll",
+          stack: "locomotive-scroll",
+          siteUrl: "",
+          img: "rita.png",
           date: "01.21"
         },
         {
