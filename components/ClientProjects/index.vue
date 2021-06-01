@@ -1,18 +1,18 @@
 <template>
   <section class="s-client">
     <div class="client-projects-container">
-      <h2 class="heading-xl">Other Projects</h2>
+      <h2 class="heading-xl">Client Projects</h2>
       <p class="heading-r">@Monotas</p>
       <ul class="list-r">
         <li>
-          <a href="http://" target="_blank" rel="noopener" follow="nofollow">
+          <a href="http://https://www.figma.com/file/0hoMZm7EWahMDPpNABuci0/Untitled?node-id=0%3A1" target="_blank" rel="noopener" follow="nofollow">
             2021: BizSuite &mdash; Web Design, Front-end Development [Nuxt,
             TailwindCSS, Storybook]
           </a>
         </li>
         <li>&nbsp;</li>
         <li>
-          <a href="http://" target="_blank" rel="noopener" follow="nofollow">
+          <a href="http://https://www.figma.com/file/3BSG5gXbBfWM77YnswBP3r/Morris?node-id=0%3A1" target="_blank" rel="noopener" follow="nofollow">
             2020: Morris &mdash; Web Design
           </a>
         </li>
@@ -25,16 +25,16 @@
         </li>
         <li>&nbsp;</li>
         <li>
-          <a href="http://" target="_blank" rel="noopener" follow="nofollow">
+          <a href="#" target="_blank" rel="noopener" follow="nofollow">
             2020: Monotas' Owned Media &mdash; Web Design, Front-end Development
             [Nuxt]
           </a>
         </li>
         <li>&nbsp;</li>
         <li>
-          <a href="http://" target="_blank" rel="noopener" follow="nofollow">
-            2020: Tokyo Chuo Rotary &mdash; Web Design, Front-end Development
-            [Nuxt, Storybook]
+          <a href="#" target="_blank" rel="noopener" follow="nofollow">
+            2020: (Discontinued) Tokyo Chuo Rotary &mdash; Web Design, Front-end Development
+            [Nuxt, Storybook] 
           </a>
         </li>
       </ul>

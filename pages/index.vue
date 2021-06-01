@@ -51,7 +51,7 @@ export default {
           collection: "Animation Experiments",
           title: "Bella",
           description:
-            "A landing page project inspired by the amazing https://stockdutchdesign.com/ website",
+            "A landing page project inspired by the amazing Stock Dutch Design website",
           stack: "Nuxtjs, GSAP, Barbajs",
           siteUrl: "https://bella-bella.netlify.app",
           img: "bella.png",
