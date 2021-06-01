@@ -37,7 +37,15 @@
               >
             </li>
             <li class="link-r">
-              <a href="#contact">Email</a>
+              <a href="mailto:pham.levi.9@gmail.com">Email</a>
+            </li>
+            <li class="link-r">
+              <a
+                href="https://read.cv/phamlevi"
+                target="_blank"
+                rel="noopener"
+                >Resume</a
+              >
             </li>
           </ul>
         </div>

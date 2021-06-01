@@ -75,9 +75,9 @@ export default {
       default: ""
     },
     links: {
-      type: Array,
+      type: Object,
       required: false,
-      default: () => []
+      default: () => {}
     },
     img: {
       type: String,

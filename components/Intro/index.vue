@@ -15,7 +15,7 @@
         <p class="paragraph-r">
           I have the privilege of being both web designer and engineer at
           Monotas, going from prototype to code and bridging the gap between
-          these seemingly far-apart roles.
+          these seemingly far-apart roles. Here are the technologies I have worked with:
         </p>
         <p class="paragraph-r">
           <span class="font-italic">Tools</span>
@@ -49,6 +49,9 @@
     }
     &:nth-child(2) {
       .paragraph-r {
+        &:first-child {
+          margin-bottom: 4.33vw;
+        }
         &:last-of-type {
           margin-bottom: 0;
         }
@@ -77,8 +80,13 @@
         flex-basis: unset;
       }
     }
-    .paragraph-r:last-of-type {
-      margin-bottom: 8vw;
+    .paragraph-r{
+      &:first-child {
+        margin-bottom: 0;
+      }
+      &:last-of-type {
+        margin-bottom: 8vw;
+      }
     }
   }
 }
