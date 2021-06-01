@@ -2,8 +2,8 @@
   <section class="s-client">
     <div class="client-projects-container">
       <h2 class="heading-xl">Client Projects</h2>
-      <p class="heading-r">@Monotas</p>
-      <ul class="list-r">
+      <p class="heading-m">@Monotas</p>
+      <ul class="paragraph-r">
         <li>
           <a href="https://www.figma.com/file/0hoMZm7EWahMDPpNABuci0/Untitled?node-id=0%3A1" target="_blank" rel="noopener" follow="nofollow">
             2021: (Ongoing) BizSuite &mdash; Web Design, Front-end Development [Nuxt,
@@ -38,8 +38,8 @@
           </a>
         </li>
       </ul>
-      <p class="heading-r">Micro Projects</p>
-      <ul class="list-r">
+      <p class="heading-m">Micro Projects</p>
+      <ul class="paragraph-r">
         <li>
           <a href="http://https://plv-portfolio-v1.netlify.app" target="_blank" rel="noopener" follow="nofollow">
             Portfolio- 01 [HTML, CSS, GSAP]
@@ -67,8 +67,11 @@
   padding: 8.33vw;
   position: relative;
   .heading-xl,
-  .list-r {
+  .paragraph-r {
     margin-bottom: 4.167vw;
+  }
+  .heading-m {
+    margin-bottom: 1.33vw;
   }
   a {
     cursor: pointer;
@@ -92,7 +95,7 @@
     .heading-xl {
       margin-bottom: 16vw;
     }
-    .heading-r {
+    .heading-m {
       font-size: 3.733vw;
       line-height: 3.733vw;
       margin-bottom: 4vw;

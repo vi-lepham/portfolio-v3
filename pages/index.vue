@@ -60,7 +60,7 @@ export default {
           date: "04.21"
         },
         {
-          dataColor: "rgb(192, 161, 161)",
+          dataColor: "#f3f3f1",
           collection: "Animation Experiments",
           title: "Rita",
           description:
@@ -74,7 +74,7 @@ export default {
           date: "01.21"
         },
         {
-          dataColor: "#f3f3f1",
+          dataColor: "rgb(245, 229, 177)",
           collection: "Side Projects - Ecommerce",
           title: "Skivi",
           description:
