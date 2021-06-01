@@ -6,7 +6,7 @@
       <ul class="list-r">
         <li>
           <a href="http://https://www.figma.com/file/0hoMZm7EWahMDPpNABuci0/Untitled?node-id=0%3A1" target="_blank" rel="noopener" follow="nofollow">
-            2021: BizSuite &mdash; Web Design, Front-end Development [Nuxt,
+            2021: (Ongoing) BizSuite &mdash; Web Design, Front-end Development [Nuxt,
             TailwindCSS, Storybook]
           </a>
         </li>
@@ -18,7 +18,7 @@
         </li>
         <li>&nbsp;</li>
         <li>
-          <a href="http://" target="_blank" rel="noopener" follow="nofollow">
+          <a href="http://karte-storybook.netlify.app" target="_blank" rel="noopener" follow="nofollow">
             2020: Cloud Karte &mdash; Front-end Development [Nuxt, TailwindCSS,
             Storybook]
           </a>
@@ -26,7 +26,7 @@
         <li>&nbsp;</li>
         <li>
           <a href="#" target="_blank" rel="noopener" follow="nofollow">
-            2020: Monotas' Owned Media &mdash; Web Design, Front-end Development
+            2020: (Awaiting back-end) Monotas' Owned Media &mdash; Web Design, Front-end Development
             [Nuxt]
           </a>
         </li>
@@ -41,7 +41,7 @@
       <p class="heading-r">Micro Projects</p>
       <ul class="list-r">
         <li>
-          <a href="http://" target="_blank" rel="noopener" follow="nofollow">
+          <a href="http://https://plv-portfolio-v1.netlify.app" target="_blank" rel="noopener" follow="nofollow">
             Portfolio- 01 [HTML, CSS, GSAP]
           </a>
         </li>
