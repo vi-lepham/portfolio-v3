@@ -15,7 +15,13 @@
             <p class="paragraph-r">
               {{ stack }}
             </p>
-            <a :href="siteUrl" target="_blank" rel="noopener" class="button-r">
+            <a
+              :href="links.github"
+              target="_blank"
+              class="paragraph-m"
+              ><i class="fa fa-github"></i
+            ></a>
+            <a :href="links.live" target="_blank" rel="noopener" class="button-r">
               View site &#160; <span>→</span>
             </a>
           </div>
@@ -68,10 +74,10 @@ export default {
       required: false,
       default: ""
     },
-    siteUrl: {
-      type: String,
+    links: {
+      type: Array,
       required: false,
-      default: ""
+      default: () => []
     },
     img: {
       type: String,
@@ -111,7 +117,7 @@ export default {
           display: block;
           width: 16.66vw;
           height: 1px;
-          background-color: #171717;
+          background-color: var(--text-color);
           top: 50%;
           transform: translateY(-50%);
           right: -10%;
@@ -143,6 +149,13 @@ export default {
   }
   .content-info {
     padding: 8.33vw 8.33vw 0;
+    .fa-github {
+      font-size: 1.66vw;
+      color: rgb(75, 71, 71);
+      &:hover {
+        color: var(--text-color);
+      }
+    }
     .paragraph-m {
       margin-bottom: 2.8vw;
     }
@@ -158,7 +171,7 @@ export default {
         width: 8vw;
         height: 1px;
         content: "";
-        background: #171717;
+        background: var(--text-color);
         position: absolute;
       }
       span {

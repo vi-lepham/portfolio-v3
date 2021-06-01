@@ -3,8 +3,8 @@
     <loader></loader>
     <main class="a-main" data-scroll-container>
       <article class="a-article">
-        <about data-scroll-section></about>
-        <intro data-scroll-section></intro>
+        <about></about>
+        <intro></intro>
         <project
           v-for="(project, id) in projects"
           :key="id"
@@ -14,10 +14,9 @@
           :title="project.title"
           :description="project.description"
           :stack="project.stack"
-          :siteUrl="project.siteUrl"
+          :links="project.links"
           :img="require(`../assets/img/${project.img}`)"
           :date="project.date"
-          data-scroll-section
         ></project>
         <client-projects></client-projects>
         <app-footer></app-footer>
@@ -53,29 +52,38 @@ export default {
           description:
             "A landing page project inspired by the amazing Stock Dutch Design website",
           stack: "Nuxtjs, GSAP, Barbajs",
-          siteUrl: "https://bella-bella.netlify.app",
+          links: {
+            github: "https://github.com/vi-lepham/bella",
+            live: "https://bella-bella.netlify.app"
+          },
           img: "bella.png",
           date: "04.21"
         },
         {
-          dataColor: "#f3f3f1",
+          dataColor: "rgb(192, 161, 161)",
           collection: "Animation Experiments",
           title: "Rita",
           description:
             "A landing page with scrolling grids powered by Locomotive Scroll",
           stack: "locomotive-scroll",
-          siteUrl: "",
+          links: {
+            github: "https://github.com/vi-lepham/rita-landing",
+            live: "https://rita-landing.netlify.app"
+          },
           img: "rita.png",
           date: "01.21"
         },
         {
-          dataColor: "rgb(255, 232, 197)",
+          dataColor: "#f3f3f1",
           collection: "Side Projects - Ecommerce",
           title: "Skivi",
           description:
             "A ecommerce app built with React and Firebase database.",
           stack: "React, Redux, Firebase",
-          siteUrl: "https://shop-skivi.netlify.app",
+          links: {
+            github: "https://github.com/vi-lepham/skivi-ecommerce",
+            live: "https://shop-skivi.netlify.app"
+          },
           img: "skivi.jpeg",
           date: "05.20"
         },
@@ -86,17 +94,16 @@ export default {
           description:
             'A recipe finder app that answers to the question: "Too lazy to shop. What can I cook from my leftovers?"',
           stack: "React, Hooks, Spoonacular API",
-          siteUrl: "https://pinesandbutter.netlify.app",
+          links: {
+            github: "https://github.com/vi-lepham/pines-n-butter",
+            live: "https://pinesandbutter.netlify.app"
+          },
           img: "pinesnbutter.png",
           date: "07.20"
         },
       ]
     };
   },
-  mounted() {
-    const body = document.querySelector("body");
-    body.classList.add("a-body");
-  }
 };
 </script>
 

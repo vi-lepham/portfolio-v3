@@ -5,14 +5,14 @@
       <p class="heading-r">@Monotas</p>
       <ul class="list-r">
         <li>
-          <a href="http://https://www.figma.com/file/0hoMZm7EWahMDPpNABuci0/Untitled?node-id=0%3A1" target="_blank" rel="noopener" follow="nofollow">
+          <a href="https://www.figma.com/file/0hoMZm7EWahMDPpNABuci0/Untitled?node-id=0%3A1" target="_blank" rel="noopener" follow="nofollow">
             2021: (Ongoing) BizSuite &mdash; Web Design, Front-end Development [Nuxt,
             TailwindCSS, Storybook]
           </a>
         </li>
         <li>&nbsp;</li>
         <li>
-          <a href="http://https://www.figma.com/file/3BSG5gXbBfWM77YnswBP3r/Morris?node-id=0%3A1" target="_blank" rel="noopener" follow="nofollow">
+          <a href="https://www.figma.com/file/3BSG5gXbBfWM77YnswBP3r/Morris?node-id=0%3A1" target="_blank" rel="noopener" follow="nofollow">
             2020: Morris &mdash; Web Design
           </a>
         </li>
@@ -75,6 +75,11 @@
     overflow: hidden;
     position: relative;
     text-decoration: none;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+    &:hover {
+      text-decoration: underline;
+      transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+    }
   }
   .list-r:last-of-type {
     margin-bottom: 0;

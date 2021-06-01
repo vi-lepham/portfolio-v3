@@ -1,6 +1,7 @@
 :root {
 
   --bg-color: #f3f2f7;
+  --text-color: #171717;
 
 }
 
@@ -15,10 +16,12 @@
 
 body {
   font: 16px/1.7 "Graphit", sans-serif;
-  color: #171717;
+  color: var(--text-color);
   will-change: background-color;
   background-color: var(--bg-color);
   transition: background-color 0.3s linear;
+  overscroll-behavior: none;
+  overflow: hidden;
 
   &.a-mobile {
     overflow: unset;

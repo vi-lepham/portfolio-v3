@@ -7,47 +7,38 @@ gsap.registerPlugin(ScrollTrigger);
 const select = e => document.querySelector(e);
 const selectAll = e => document.querySelectorAll(e);
 
-// Init locomotive scroll
-function initSmoothScroll() {
 
-  const lscroll = new LocomotiveScroll({
-    el: select("[data-scroll-container]"),
-    smooth: true,
-    smoothMobile: true,
-  });
+const scrollContainer = select("[data-scroll-container]");
 
-  lscroll.on("scroll", ScrollTrigger.update);
+const scroller = new LocomotiveScroll({
+  el: scrollContainer,
+  smooth: true
+});
 
-  ScrollTrigger.scrollerProxy("[data-scroll-container]", {
-    scrollTop(value) {
-      return arguments.length
-        ? lscroll.scrollTo(value, 0, 0)
-        : lscroll.scroll.instance.scroll.y;
-    }, 
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight
-      };
-    },
-    
-    pinType: document.querySelector("[data-scroll-container]").style.transform
-      ? "transform"
-      : "fixed"
-  });
+scroller.on("scroll", ScrollTrigger.update);
 
-  ScrollTrigger.addEventListener("refresh", () => lscroll.update());
+ScrollTrigger.scrollerProxy(scrollContainer, {
+  scrollTop(value) {
+    return arguments.length
+      ? scroller.scrollTo(value, 0, 0)
+      : scroller.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      left: 0,
+      top: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  },
+  pinType: scrollContainer.style.transform ? "transform" : "fixed"
+});
 
-  ScrollTrigger.refresh();
 
-}
 
-// Init loading animations
-function initLoadingAnim() {
-  // select components
+window.addEventListener("load", function() {
 
+  // Loading anim
   const loader = select(".a-loader");
   const firstScrollNumber = select(
     ".a-loader .loader-heading .heading-column:nth-child(2) .heading-row"
@@ -80,30 +71,33 @@ function initLoadingAnim() {
     ease: Power4.easeInOut,
     delay: 2
   });
-}
 
-// Inner images parallax
-function initImageParallax() {
+
+  // Image parallax
   selectAll(".project-image").forEach(section => {
     const image = section.querySelector(".image-src");
 
     gsap.to(image, {
-      top: "7%",
-      ease: Power4.ease,
       scrollTrigger: {
+        scroller: scrollContainer,
         trigger: section,
         scrub: true,
-      }
+      },
+      top: "7%",
+      ease: "none",
     });
   });
-}
 
-// Change background color on each project
-function initBackgroundChange() {
+  // Change bgc on scroll
+  const updateBodyColor = color => {
+    document.documentElement.style.setProperty("--bg-color", color);
+  };
+  
   selectAll(".s-project .project-container").forEach(project => {
     let newColor = project.getAttribute("data-color");
 
     ScrollTrigger.create({
+      scroller: scrollContainer,
       trigger: project,
       start: "top 50%",
       end: `+=${project.clientHeight}`,
@@ -113,17 +107,8 @@ function initBackgroundChange() {
       onEnterBack: () => updateBodyColor(newColor)
     });
   });
-}
 
-const updateBodyColor = color => {
-  document.documentElement.style.setProperty("--bg-color", color);
-};
+  ScrollTrigger.addEventListener("refresh", () => scroller.update());
 
-function init() {
-  initSmoothScroll();
-  initLoadingAnim();
-  initImageParallax();
-  initBackgroundChange();
-}
-
-init();
+  ScrollTrigger.refresh();
+})

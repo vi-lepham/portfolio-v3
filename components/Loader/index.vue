@@ -35,8 +35,8 @@
   position: fixed;
   overflow: hidden;
   cursor: wait;
-  color: #f3f2f7;
-  background: #171717;
+  color: var(--bg-color);
+  background: var(--text-color);
   will-change: transform;
   .loader-container {
     top: 0;
