@@ -5,9 +5,19 @@
         <h1 class="paragraph-r">
           Vi Le Pham
           <br />
-          Designer ・　Front End Engineer
+          {{ $t("roles") }}
         </h1>
       </div>
+      <!-- <div class="about-languages">
+        <div class="paragraph-r">
+          <nuxt-link :to="switchLocalePath('ja')" class="language-link"
+            >JA</nuxt-link
+          >
+          <nuxt-link :to="switchLocalePath('en')" class="language-link"
+            >EN</nuxt-link
+          >
+        </div>
+      </div> -->
       <div class="about-badge">
         <div class="badge-text"></div>
       </div>
@@ -40,10 +50,7 @@
               <a href="mailto:pham.levi.9@gmail.com">Email</a>
             </li>
             <li class="link-r">
-              <a
-                href="https://read.cv/phamlevi"
-                target="_blank"
-                rel="noopener"
+              <a href="https://read.cv/phamlevi" target="_blank" rel="noopener"
                 >Resume</a
               >
             </li>
@@ -64,7 +71,8 @@
   .about-container {
     height: 100vh;
   }
-  .about-head {
+  .about-head,
+  .about-languages {
     position: absolute;
     width: 25vw;
     height: 12.5vw;
@@ -75,6 +83,20 @@
       top: 50%;
       transform: translateY(-50%);
       margin: 0;
+    }
+  }
+  .about-languages {
+    left: 58.33vw;
+    .language-link {
+      margin-right: 0.66vw;
+      transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+      &:hover {
+        text-decoration: underline;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+      }
+    }
+    .nuxt-link-exact-active {
+      font-weight: bold;
     }
   }
   .about-badge {
@@ -187,6 +209,9 @@
           margin-right: unset;
         }
       }
+    }
+    .about-languages {
+      top: 4.33vw;
     }
   }
 }

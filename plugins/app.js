@@ -1,12 +1,18 @@
-import { gsap, Power4 } from "gsap/dist/gsap";
+import { gsap, TweenMax, Back, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const select = e => document.querySelector(e);
 const selectAll = e => document.querySelectorAll(e);
 
+const loader = select(".a-loader");
+const firstScrollNumber = select(
+  ".a-loader .loader-heading .heading-column:nth-child(2) .heading-row"
+);
+const secondScrollNumber = select(
+  ".a-loader .loader-heading .heading-column:nth-child(3) .heading-row"
+);
 
 const scrollContainer = select("[data-scroll-container]");
 
@@ -34,19 +40,19 @@ ScrollTrigger.scrollerProxy(scrollContainer, {
   pinType: scrollContainer.style.transform ? "transform" : "fixed"
 });
 
-
-
 window.addEventListener("load", function() {
+  initLoader();
 
-  // Loading anim
-  const loader = select(".a-loader");
-  const firstScrollNumber = select(
-    ".a-loader .loader-heading .heading-column:nth-child(2) .heading-row"
-  );
-  const secondScrollNumber = select(
-    ".a-loader .loader-heading .heading-column:nth-child(3) .heading-row"
-  );
+  initImageParallax();
 
+  initChangeBackground();
+
+  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+  ScrollTrigger.refresh();
+});
+
+function initLoader() {
   // animate numbers
 
   gsap.to(firstScrollNumber, {
@@ -71,8 +77,9 @@ window.addEventListener("load", function() {
     ease: Power4.easeInOut,
     delay: 2
   });
+}
 
-
+function initImageParallax() {
   // Image parallax
   selectAll(".project-image").forEach(section => {
     const image = section.querySelector(".image-src");
@@ -81,18 +88,17 @@ window.addEventListener("load", function() {
       scrollTrigger: {
         scroller: scrollContainer,
         trigger: section,
-        scrub: true,
+        scrub: true
       },
       top: "7%",
-      ease: "none",
+      ease: "none"
     });
   });
+}
 
+function initChangeBackground() {
   // Change bgc on scroll
-  const updateBodyColor = color => {
-    document.documentElement.style.setProperty("--bg-color", color);
-  };
-  
+
   selectAll(".s-project .project-container").forEach(project => {
     let newColor = project.getAttribute("data-color");
 
@@ -107,8 +113,50 @@ window.addEventListener("load", function() {
       onEnterBack: () => updateBodyColor(newColor)
     });
   });
+}
 
-  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+const updateBodyColor = color => {
+  document.documentElement.style.setProperty("--bg-color", color);
+};
 
-  ScrollTrigger.refresh();
-})
+function transitionEnter(el, done) {
+  TweenMax.to(firstScrollNumber, 2, {
+    top: 0,
+    bottom: "auto",
+    ease: Power4.easeInOut
+  })
+
+  TweenMax.to(secondScrollNumber, 2, {
+    y: "-90%",
+    ease: Power4.easeInOut
+  })
+
+  TweenMax.to(loader, 1, {
+    width: 0,
+    display: "none",
+    ease: Power4.easeInOut,
+    delay: 2,
+    onComplete: done
+  })
+
+  TweenMax.to(el, {
+    opacity: 1
+  })
+}
+
+function transitionLeave(el, done) {
+  TweenMax.to(loader, 1, {
+    width: "100%",
+    display: "block",
+    ease: Power4.easeInOut,
+    onComplete: done
+  })
+  TweenMax.to(el, {
+    opacity: 0
+  })
+}
+
+export {
+  transitionEnter,
+  transitionLeave
+}

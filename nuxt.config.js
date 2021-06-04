@@ -29,7 +29,24 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    [
+      "nuxt-i18n",
+      {
+        locales: [
+          { code: "ja", name: "Japanese", iso: "ja_JP", file: "ja.json" },
+          { code: "en", name: "English", iso: "en-US", file: "en.json" },
+        ],
+        defaultLocale: "ja",
+        langDir: "locales/",
+        strategy: "prefix_and_default",
+        vueI18n: {
+          fallbackLocale: "ja",
+        },
+        vueI18nLoader: true,
+      },
+    ],
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
