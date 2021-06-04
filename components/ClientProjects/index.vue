@@ -41,20 +41,8 @@
       <p class="heading-m">Micro Projects</p>
       <ul class="paragraph-r">
         <li>
-          <a href="http://https://plv-portfolio-v1.netlify.app" target="_blank" rel="noopener" follow="nofollow">
-            Portfolio- 01 [HTML, CSS, GSAP]
-          </a>
-        </li>
-        <li>&nbsp;</li>
-        <li>
           <a href="http://timesoftiu.com" target="_blank" rel="noopener" follow="nofollow">
             TimesOfTIU [Figma, CSS, Wordpress]
-          </a>
-        </li>
-        <li>&nbsp;</li>
-        <li>
-          <a href="http://" target="_blank" rel="noopener" follow="nofollow">
-            Meditation App [HTML, CSS, JS]
           </a>
         </li>
       </ul>
@@ -65,10 +53,13 @@
 <style lang="scss" scoped>
 .s-client {
   padding: 8.33vw;
+  padding-bottom: 1.33vw;
   position: relative;
-  .heading-xl,
   .paragraph-r {
     margin-bottom: 4.167vw;
+  }
+  .heading-xl {
+    margin-bottom: 8.33vw;
   }
   .heading-m {
     margin-bottom: 1.33vw;
@@ -86,6 +77,10 @@
   }
   .list-r:last-of-type {
     margin-bottom: 0;
+  }
+  .heading-m,
+  ul {
+    margin-left: 16.66vw;
   }
 }
 @media only screen and (max-width: 768px) {

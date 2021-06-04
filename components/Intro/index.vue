@@ -3,7 +3,7 @@
     <div class="intro-container" data-color="#f3f2f7">
       <div class="intro-column">
         <p class="paragraph-m">
-          Front End Engineer and Designer from Hanoi, based in Tokyo.  Monotas by day, freelancer by night - turning designs into beautiful digital experiences.
+          {{ $t("intro.headline") }}
         </p>
         <p class="paragraph-r">
           <span class="font-italic">Email</span>
@@ -13,9 +13,7 @@
       </div>
       <div class="intro-column">
         <p class="paragraph-r">
-          I have the privilege of being both web designer and engineer at
-          Monotas, going from prototype to code and bridging the gap between
-          these seemingly far-apart roles. Here are the technologies I have worked with:
+          {{ $t("intro.subHeadline") }}
         </p>
         <p class="paragraph-r">
           <span class="font-italic">Tools</span>

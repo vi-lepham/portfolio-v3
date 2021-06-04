@@ -1,0 +1,13 @@
+{
+  "roles": "Designer・Front-end Engineer",
+  "intro": {
+    "headline": "Front End Engineer and Designer from Hanoi, based in Tokyo. Monotas by day, freelancer by night - turning designs into beautiful digital experiences.",
+    "subHeadline": "I have the privilege of being both web designer and engineer at Monotas, going from prototype to code and bridging the gap between these seemingly far-apart roles. Here are the technologies I have worked with:"
+  },
+  "clientProjects": "Client Projects",
+  "karte": "Cloud Karte's interactive components library through Storybook.",
+  "bella": "A landing page project inspired by the amazing Stock Dutch Design website",
+  "rita": "A landing page with scrolling grids powered by Locomotive Scroll",
+  "skivi": "A ecommerce app built with React and Firebase database.",
+  "pnb": "A recipe finder app that answers to the question: 'Too lazy to shop. What can I cook from my leftovers?'"
+}

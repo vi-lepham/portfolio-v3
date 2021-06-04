@@ -19,7 +19,7 @@ body {
   color: var(--text-color);
   will-change: background-color;
   background-color: var(--bg-color);
-  transition: background-color 0.3s linear;
+  transition: background-color 1s linear;
   overscroll-behavior: none;
   overflow: hidden;
 

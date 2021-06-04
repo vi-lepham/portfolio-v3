@@ -16,6 +16,7 @@
               {{ stack }}
             </p>
             <a
+              v-if="links.github"
               :href="links.github"
               target="_blank"
               class="paragraph-m"
