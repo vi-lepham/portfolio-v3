@@ -46,6 +46,19 @@ export default {
     return {
       projects: [
         {
+          dataColor: "#c2cac3",
+          collection: "Animation Experiments",
+          title: "Bella",
+          description: this.$t("bella"),
+          stack: "Nuxtjs, GSAP, Barbajs",
+          links: {
+            github: "https://github.com/vi-lepham/bella",
+            live: "https://bella-bella.netlify.app"
+          },
+          img: "bella.png",
+          date: "2021"
+        },
+        {
           dataColor: "",
           collection: "Client Project's Demo",
           title: "Cloud Karte",
@@ -82,19 +95,6 @@ export default {
           },
           img: "pinesnbutter.png",
           date: "2020"
-        },
-        {
-          dataColor: "#c2cac3",
-          collection: "Animation Experiments",
-          title: "Bella",
-          description: this.$t("bella"),
-          stack: "Nuxtjs, GSAP, Barbajs",
-          links: {
-            github: "https://github.com/vi-lepham/bella",
-            live: "https://bella-bella.netlify.app"
-          },
-          img: "bella.png",
-          date: "2021"
         },
         {
           dataColor: "#f3f3f1",
