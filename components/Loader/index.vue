@@ -6,7 +6,7 @@
       </div>
       <div class="loader-heading">
         <div class="heading-xl">
-          <div class="heading-column">Folio&mdash;</div>
+          <div class="heading-column">Folioー</div>
           <div class="heading-column">
             <span class="heading-row">
               <i>0</i> <i>2</i> <i>3</i> <i>4</i> <i>5</i> <i>6</i> <i>7</i>

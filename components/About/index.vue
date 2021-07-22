@@ -22,7 +22,7 @@
         <div class="badge-text"></div>
       </div>
       <div class="about-heading">
-        <h2 class="heading-xl">Folio- 03</h2>
+        <h2 class="heading-xl">Folioー 03</h2>
       </div>
       <div class="about-text">
         <div class="text-column">
